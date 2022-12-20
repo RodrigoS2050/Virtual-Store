@@ -1,0 +1,12 @@
+@import "../styles/variables.scss";
+
+.app {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh + 2rem);
+}
+.content {
+  flex: 1;
+}

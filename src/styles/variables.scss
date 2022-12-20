@@ -1,0 +1,14 @@
+// Fonts
+$primary-font: Arial, Helvetica, sans-serif;
+
+// Colors
+
+$primary-white: #ddd;
+$primary-black: #000;
+
+// Mixins
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../../styles/variables.scss";
+
+.payment {
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  background-color: #f9f8f6;
+  padding: 50px;
+}
+.payment h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: $primary-font;
+  margin-bottom: 2rem;
+}
+input {
+  margin-bottom: 30px;
+}
+.error-msg {
+  font-size: 16px;
+  margin-left: 5px;
+  color: #ff0000;
+  margin-top: -25px;
+  margin-bottom: 20px;
+}
+.bought {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #91fb5d;
+  border: 2px solid #017e01;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 40px;
+}
+button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}

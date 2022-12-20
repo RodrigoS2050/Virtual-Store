@@ -1,0 +1,75 @@
+<form class="payment animeLeft" [formGroup]="form">
+  <h2>Preencha seu dados</h2>
+
+  <label for="name">Nome</label>
+  <input
+    id="name"
+    name="name"
+    type="text"
+    class="form-control"
+    autocomplete="off"
+    formControlName="name"
+  />
+  <div
+    class="error-msg"
+    *ngIf="form.get('name')?.errors?.['pattern'] && form.get('name')?.touched"
+  >
+    <p>Nome Inválido</p>
+  </div>
+  <div
+    class="error-msg"
+    *ngIf="form.get('name')?.errors?.['required'] && form.get('name')?.touched"
+  >
+    <p>Preencha um valor</p>
+  </div>
+  <label for="card">Cartão de Crédito</label>
+  <input
+    id="card"
+    name="card"
+    type="number"
+    class="form-control"
+    placeholder="0000-0000-0000-0000"
+    autocomplete="off"
+    formControlName="card"
+  />
+  <div
+    class="error-msg"
+    *ngIf="form.get('card')?.errors?.['pattern'] && form.get('card')?.touched"
+  >
+    <p>Cartão de Crédito Inválido</p>
+  </div>
+  <div
+    class="error-msg"
+    *ngIf="form.get('card')?.errors?.['required'] && form.get('card')?.touched"
+  >
+    <p>Preencha um valor</p>
+  </div>
+  <label for="cvv">CVV</label>
+  <input
+    id="cvv"
+    name="cvv"
+    type="number"
+    class="form-control"
+    placeholder="000"
+    autocomplete="off"
+    formControlName="cvv"
+  />
+  <div
+    class="error-msg"
+    *ngIf="form.get('cvv')?.errors?.['pattern'] && form.get('cvv')?.touched"
+  >
+    <p>CVV Inválido</p>
+  </div>
+  <div
+    class="error-msg"
+    *ngIf="form.get('cvv')?.errors?.['required'] && form.get('cvv')?.touched"
+  >
+    <p>Preencha um valor</p>
+  </div>
+  <button (click)="boughtItem()" class="btn btn-primary">
+    Finalizar Compra
+  </button>
+  <div *ngIf="state">
+    <p class="bought animeLeft">Compra Efetuada com Sucesso!</p>
+  </div>
+</form>

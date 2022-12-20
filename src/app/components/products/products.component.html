@@ -1,0 +1,11 @@
+<div *ngIf="productService.loading" class="loading">
+  <div class="spinner"></div>
+</div>
+<section class="products animeLeft">
+  <div *ngFor="let product of products">
+    <a routerLink="/products/{{ product.id }}">
+      <img [src]="product.fotos[0].src" [alt]="product.fotos[0].titulo" />
+      <h1 class="name">{{ product.nome }}</h1>
+    </a>
+  </div>
+</section>

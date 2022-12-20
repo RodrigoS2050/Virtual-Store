@@ -1,0 +1,24 @@
+@import "../../../styles/variables.scss";
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  @include mobile {
+    gap: 1.5rem;
+  }
+}
+.name {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $primary-black;
+}
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../../styles/variables.scss";
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.data {
+  padding: 0;
+  list-style: none;
+}
+.data li {
+  font-size: 1.2rem;
+  font-family: $primary-font;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.data li:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: $primary-white;
+  margin-right: 10px;
+}
+@include mobile {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}

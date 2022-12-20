@@ -1,0 +1,22 @@
+@import "../../../styles/variables.scss";
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.product img {
+  margin-bottom: 2rem;
+}
+p {
+  cursor: auto;
+}
+.description {
+  font-family: $primary-font;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}

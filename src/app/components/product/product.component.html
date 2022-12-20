@@ -1,0 +1,16 @@
+<div *ngIf="productService.loading" class="loading">
+  <div class="spinner"></div>
+</div>
+<section class="product animeLeft" *ngIf="product">
+  <div>
+    <div *ngFor="let img of product.fotos">
+      <img [src]="img.src" [alt]="img.titulo" />
+    </div>
+  </div>
+  <div>
+    <h1>{{ product.nome }}</h1>
+    <p class="btn btn-primary">R$ {{ product.preco }}</p>
+    <p class="description">Um produto de excelente qualidade</p>
+    <button routerLink="/payment" class="btn btn-success">Comprar</button>
+  </div>
+</section>
